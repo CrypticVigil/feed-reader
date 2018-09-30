@@ -91,7 +91,7 @@ $(function() {
 
         beforeEach(function(done) {
             loadFeed(0, function() {
-                numEntries = document.getElementsByClassName('entry');
+                numEntries = document.querySelector('.feed').children;
                 done();
             });
         });
@@ -115,11 +115,11 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, function() {
                 feedOne = document.querySelector('.feed').innerHTML;
-            });
-
-            loadFeed(1, function() {
-                feedTwo = document.querySelector('.feed').innerHTML;
-                done();
+            
+                loadFeed(1, function() {
+                    feedTwo = document.querySelector('.feed').innerHTML;
+                    done();
+                });
             });
         });
 
