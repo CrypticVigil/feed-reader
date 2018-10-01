@@ -91,7 +91,8 @@ $(function() {
 
         beforeEach(function(done) {
             loadFeed(0, function() {
-                numEntries = document.querySelector('.feed').children;
+                numEntries = document.querySelector('.feed').querySelectorAll('.entry');
+                console.log(numEntries);
                 done();
             });
         });
